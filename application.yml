@@ -24,11 +24,21 @@ spring:
 
   cloud:
     stream:
-      kafka:
+      instanceCount: 1
+      instanceIndex: 0
+      rabbitmq:
         binder:
-          #brokers: 192.168.239.129:9092,192.168.239.129:9093,192.168.239.129:9094
-          zkNodes: 127.0.0.1:2181
+          adminAddresses: localhost:15672
 
+        bindings:
+          input:
+            consumer:
+              autoCommitOffset: true
+          output:
+            producer:
+              acknowledgeMode: 'AUTO'
+myapp:
+  zkNodes: 127.0.0.1:2181
 # Discovery Server Access
 eureka:
   instance:
