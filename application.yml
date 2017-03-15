@@ -3,7 +3,7 @@ spring:
     show-sql: false
     hibernate:
       naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
-      ddl-auto: none
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
