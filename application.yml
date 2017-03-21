@@ -28,7 +28,7 @@ spring:
       instanceIndex: 0
       rabbitmq:
         binder:
-          adminAddresses: localhost:15672
+          adminAddresses: 192.168.0.9:15672
 
         bindings:
           input:
@@ -38,7 +38,7 @@ spring:
             producer:
               acknowledgeMode: 'AUTO'
 myapp:
-  zkNodes: 127.0.0.1:2181
+  zkNodes: 192.168.0.9:2181
 # Discovery Server Access
 eureka:
   instance:
@@ -47,7 +47,7 @@ eureka:
 
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://192.168.0.9:1111/eureka/
 
 hystrix:
   command.default.execution.isolation.thread.timeoutInMilliseconds: 3000
