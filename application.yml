@@ -37,6 +37,11 @@ spring:
           output:
             producer:
               acknowledgeMode: 'AUTO'
+  rabbitmq:
+    addresses: 192.168.0.9:5672
+    username: xintuo
+    password: xintuo 
+
 myapp:
   zkNodes: 192.168.0.9:2181
 # Discovery Server Access
