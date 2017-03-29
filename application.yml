@@ -44,6 +44,8 @@ spring:
 
 myapp:
   zkNodes: ${CONFIG_SERVER_IP:192.168.0.9}:2181
+  enableTask: false
+  enableSwagger2: true
 # Discovery Server Access
 eureka:
   instance:
