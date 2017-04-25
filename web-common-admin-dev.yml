@@ -4,7 +4,7 @@ spring:
     index: 0
 
   datasource:
-    url: jdbc:mysql://192.168.0.9:3306/xt_web_common_admin
+    url: jdbc:mysql://${CONFIG_SERVER_IP:192.168.0.9}:3306/xt_web_common_admin
     username: root
     password: xiey
     testWhileIdle: true
